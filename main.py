@@ -29,20 +29,15 @@ def main():
     text = input()
     if text == "I":
         text = input()
-        mismatch = find_mismatch(text)
-        if mismatch: 
-            print(mismatch)
-        else:
-            print("Success")
     elif text == "F":
-        for i in range(0,6):
-            text = str(i)
-            with open('/workspaces/steks-un-iekavas-OskarsLintins/test/' + text) as file:
-                text = file.read()
-                mismatch = find_mismatch(text)
-                if mismatch: 
-                    print(mismatch)
-                else:
-                    print("Success")
+        text = input()
+        with open('/workspaces/steks-un-iekavas-OskarsLintins/test/' + text) as file:
+            text = file.read()
+    mismatch = find_mismatch(text)
+    # Printing answer, write your code here
+    if mismatch: 
+        print(mismatch)
+    else:
+        print("Success")
 if __name__ == "__main__":
     main()
