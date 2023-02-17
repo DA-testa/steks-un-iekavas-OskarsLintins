@@ -30,7 +30,8 @@ def main():
     if text == "I":
         text = input()
     elif text == "F":
-        with open('/workspaces/steks-un-iekavas-OskarsLintins/test/5') as file:
+        text = input()
+        with open('/workspaces/steks-un-iekavas-OskarsLintins/test/' + text) as file:
             text = file.read()
     mismatch = find_mismatch(text)
     # Printing answer, write your code here
